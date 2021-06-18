@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i=0;
+        var j=0;
+        var op=0;
+        var ary2=[];
+        var ary3=[];
+        var ary4=[];
+        var ary=[0,1,2,3,4,5,6,7,8,9,10];
+        var flag;
+        var k=0,n;
+
+// odd number
+        for(i=0;i<=ary.length;i++){
+            if(ary[i]%2!=0){
+                    ary2[j]=ary[i];
+                    j=j+1;
+                
+            }
+        }
+        console.log(ary2);
+        document.write("ODD NO <br>");
+        document.write(ary2 + "<br>")
+
+
+
+// even number
+j=0;
+        for(i=0;i<=ary.length;i++){
+            if(ary[i]%2==0){
+                    ary3[j]=ary[i];
+                    j=j+1;
+                
+            }
+        }
+        console.log(ary3);
+        document.write("<br>EVEN NO <br>");
+        document.write(ary3 + "<br>")
+        
+// prime no
+j=0;
+k=0;
+
+document.write("<br>PRIME NO <br>");
+        for(i=0;i<ary.length;i++){
+
+            function isPrime(n)
+{
+    if (n <= 1)
+        return false;
+  
+ 
+    for (let i = 2; i < n; i++)
+        if (n % i == 0)
+            return false;
+  
+    return true;
+}
+    
+    isPrime(ary[i]) ? document.write(ary[i] + "<br>") : document.write("");
+}
+        console.log(ary4);
+    </script>
+   
+</body>
+</html>
