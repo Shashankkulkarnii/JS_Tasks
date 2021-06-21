@@ -1,3 +1,4 @@
+'use strict';
 var ary =  [10, 1, 42, 36, 4, 75, 6, 97, 81, 19, 10];
 
 //sum of ary list
@@ -19,7 +20,7 @@ var Prime =(no)=> {
             }  
             if(no ===2)
             {
-                return no
+                return no 
                 
                 // primeary[j]=no;
                 // j++;
