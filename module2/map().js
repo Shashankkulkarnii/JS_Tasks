@@ -6,7 +6,7 @@ console.log(newary);
 
 var ary1 = ['shank','utkarsh','kapil'];
 var newary1 = ary1.map(function(val ,index){   //here we concate string with a in the aray wit ma()
-   return  val + "a";
+   return  val + "a "+index;
 })
 console.log(newary1);
 
