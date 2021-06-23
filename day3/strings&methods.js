@@ -25,7 +25,6 @@ console.log(me.lastIndexOf("my"));//if ther two same word in string to find last
 console.log(me.replace(/is/g,"are"));//replcaing first parameter value to secod parameter value which is used in strings mevery time
 var str = "javascript"
 // alert(str.trim());
-console.log("charAt");
 console.log(me.charAt(4));//returning char at given index
 console.log(me.charCodeAt(6));//converting chr to charcode at the given index
 console.log(String.fromCharCode(101));//coverting char code to char
