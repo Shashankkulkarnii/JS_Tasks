@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fname;
+        var ans;
+   
+        var users =[{name:"shank",lname:"kulkarni",fname:"harish",psw:123},
+        {name:"utkarsh",lname:"khedekar",fname:"upendra",psw:456},
+        {name:"mohit",lname:"verma",fname:"shyamlal",psw:789},
+        {name:"kapil",lname:"gorkhe",fname:"sevkram",psw:101112}];//prefitted data 
+        function login(){
+            var uname = document.getElementById("nameid").value;
+            var upsw = document.getElementById("pswid").value;
+            // console.log(uname);
+            // console.log(upsw);
+             ans = users.filter(function(ele) {//checking user enter data with fitted if found
+
+                return ele.psw == upsw && ele.name == uname;//then returned user deatailes array
+                // return ele.psw > 10;
+            })
+            ans.forEach(element => {
+                document.getElementById("wlc").innerHTML= element.name;
+                console.log(element.name);  
+                document.getElementById("pname").innerHTML= element.name;    
+                console.log(element.lname);  
+                document.getElementById("plname").innerHTML= element.lname;
+                console.log(element.fname);  
+                document.getElementById("don").innerHTML=element.fname;
+
+  
+                // document.getElementById("pfname").innerHTML= element.fname;  
+            });
+ 
+        }
+    
+
+  
+    </script>
+    
+    <div>
+        <input id="nameid" type="text" placeholder="Name" ><br>
+        <input id="pswid" type="text" placeholder="password"  ><br>
+        <button onclick="login()">Log In</button>
+        
+            <div>
+            <h1>welcome <h1 id="wlc"></h1></h1>
+        </div>
+        <h5>Name</h> 
+        <h5 id="pname"></h5>
+        <h5>Last Name</h5>
+        <h5 id="plname" ></h5>
+        <h5>Father Name</h5>
+        <h5 id="don"></h5>
+    </div>
+   
+</body>
+</html>

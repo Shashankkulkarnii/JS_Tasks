@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function changecolor(){
+            document.querySelector("div.Color").style.backgroundColor="red";
+            //quer selecter changes only first tags properties who maches with provides class, id ,or tag names
+        }
+
+        function changecolorblue(){
+         var x=document.querySelectorAll(".Colorblu");
+            //quer selecter changes only first tags properties who maches with provides class, id ,or tag names
+        x.forEach(element => {
+            element.style.backgroundColor="red";
+            
+        });
+        }
+    </script>
+    <div class="Color">iam shashank</div>
+    <div class="Color">iam shashank</div>
+    <button onclick="changecolor()">change firsst paragraph Color</button>
+   
+    <p class="Colorblu">iam shashank</p>
+    <p class="Colorblu">iam shashank</p>
+    <button onclick="changecolorblue()">change color to red</button>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function changelag(){
+        document.getElementById("languageid").innerHTML="Now i love JavaScript";
+                     //here we use getelement with id and change inner html of tag
+    }
+        function changename(){
+       var a= document.getElementsByClassName("nameclass");
+       a[0].innerHTML="my name is shashank"
+                     //here we use getelement with class and change inner html of tag
+                     //its return array of elements in the tag
+    }
+
+    function changecolor(){
+        var x = document.getElementsByClassName("color");
+  x[0].style.backgroundColor = "red";
+                     //here we use getelement with class and change inner html of tag
+                     //its return array of elements in the tag
+    }
+
+        </script>
+    <div class="languageclass" id="languageid">i love name Python</div>
+    <button onclick="changelag()">Change Language</button>
+     
+
+ <div style="margin-top: 40px;" class="nameclass">my name is deadpool</div>
+ <button onclick="changename()">change name</button>
+
+ <div class="color">
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, inventore assumenda temporibus laboriosam eaque obcaecati necessitatibus earum veniam delectus numquam porro vero mollitia exercitationem sequi harum vitae ipsa at quidem.</p>
+ </div>
+ <div class="color">
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, inventore assumenda temporibus laboriosam eaque obcaecati necessitatibus earum veniam delectus numquam porro vero mollitia exercitationem sequi harum vitae ipsa at quidem.</p>
+ </div>
+ <div class="color">
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, inventore assumenda temporibus laboriosam eaque obcaecati necessitatibus earum veniam delectus numquam porro vero mollitia exercitationem sequi harum vitae ipsa at quidem.</p>
+ </div>
+
+ <button onclick="changecolor()">Change Color of paragraph1</button>
+
+
+    
+</body>
+</html>

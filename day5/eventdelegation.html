@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <ul id="ulid" style="padding: 40px;">
+        <li>shashank</li>
+        <li>utkarsh</li>
+        <li>kapil</li>
+
+    </ul>
+    <script>
+        const a = document.getElementById("ulid");//created refrance of a ul
+        a.addEventListener("click",function(e){//create event listenar and passing events object it in backend we not declare it
+           const target = e.target;             //talke clicked events taret value
+           if(target.matches("li")){            //if clicked event taget matches with li   
+            target.style.backgroundColor = "red";   //then targeted element got red bg
+           }
+        });
+        const newli = document.createElement("li");//here we created new li
+        newli.textContent = "mohit";     //fill text content
+        a.appendChild(newli);//appent it into ul
+
+        
+
+    </script>
+</body>
+</html>

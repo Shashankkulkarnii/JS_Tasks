@@ -1,0 +1,39 @@
+<!-- To display the name of the users who are currently logged-in using map(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>click button to see logedin user Name</p>
+    <button onclick="myFunction()">Show user fullname</button>
+    
+    <p>Loged in user Name is  <span id="demo"></span></p>
+    
+    <script>
+    var persons = [
+      {firstname : "shank",psw: "123", lastname: "kulkarni"},
+      {firstname : "kapil",psw: "456", lastname: "gorkhe"},
+      {firstname : "utkarsh",psw: "789", lastname: "khedekar"}
+    ];
+    
+    
+    function getuserName(item) {
+    if(item.firstname=="shank" && item.psw=="123"){
+      var fullname = [item.firstname,item.lastname].join(" ");
+      return fullname;
+      }
+    }
+    
+    function myFunction() {
+      document.getElementById("demo").innerHTML = persons.map(getuserName);
+    }
+    </script>
+       
+  
+</body>
+</html>
