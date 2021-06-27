@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .droptarget {
+        float: left; 
+        width: 100px; 
+        height: 35px;
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="color">hello</div>
+<div id="op"></div>
+<body>
+  <div class="droptarget"><p id="targetid" class="dragtarget" draggable="true" ondragstart="dragstart(event)" ondragend="dragend(event)" ondrag="Ondrag(event)"  > Drag me</p></div>
+  <div class="droptarget" id="droploc" ondragenter="Ondragenter(event)" ondragover="Ondragover(event)" ondragleave="Ondropleve(event)" ondrop="Ondrop(event)"></div>
+  <script>
+       
+      function dragstart(event){
+        event.dataTransfer.setData("Text", event.target.id);
+         const a = document.getElementById("color");
+         a.style.backgroundColor="body.red";
+         document.getElementById("op").innerHTML="iam on dragstart and doing red color";
+      }
+      function Ondrag(event){
+         const a = document.getElementById("color");
+         a.style.backgroundColor="blue";
+         document.getElementById("op").innerHTML="iam on ondrag and doing blue color";
+      }
+      function dragend(event){
+         const a = document.getElementById("color");
+         a.style.backgroundColor="green";
+         document.getElementById("op").innerHTML="iam on dragend and doing green color";
+      }
+      function Ondragenter(event){
+          document.getElementById("droploc").style.backgroundColor="orange";
+
+      }
+      function Ondragover(event){
+        event.preventDefault();
+          document.getElementById("droploc").style.backgroundColor="pink";
+      }
+      function Ondropleve(event){
+        //   document.getElementById("droploc").style.backgroundColor="purple"
+      }
+      function Ondrop(event){
+        document.getElementById("droploc").style.backgroundColor="orange";
+        event.preventDefault();
+        var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  console.log(data);
+ 
+        //  const b = document.getElementById("dragtarget").innerHTML;
+        //  console.log(b);
+        //  document.getElementById("droploc").innerHTML = b;
+
+      }
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet alias dignissimos excepturi ipsa tempore quasi incidunt cumque suscipit voluptatum, voluptas nulla nemo, facilis mollitia, rerum distinctio commodi tempora temporibus facere!</p>
+  <h5> Try click, hover, hoverout above paragraph, i used mouseover,mouseout,mouseup,mousedown. </h5>
+    <h4 id ="op"></h4>
+   <script>
+         document.getElementById("paragraph").addEventListener("mouseover",function mouseover() {
+            console.log("mousein");
+            document.getElementById("op").innerHTML = "mousein";
+        });
+         document.getElementById("paragraph").addEventListener("mouseout",function mouseout(){
+            console.log("mouseout");
+            document.getElementById("op").innerHTML = "mouseout";
+        });
+         document.getElementById("paragraph").addEventListener("mousedown",function mousedown(){
+            console.log("mousedown");
+            // alert("mousedown");
+            document.getElementById("op").innerHTML = "mousedown";
+        });
+         document.getElementById("paragraph").addEventListener("mouseup",function mouseup(){
+            console.log("mouseup");
+            // alert("mouseup");
+            document.getElementById("op").innerHTML = "mouseup";
+        });
+        
+        // document.addEventListener("mouseout",mouseout);
+        // document.addEventListener("mouseup",mouseup);
+        // document.addEventListener("mousedown",mousedown);
+      
+        
+         
+
+        
+        
+
+       
+    </script>
+    <!-- mouseover -->
+
+
+</body>
+</html>
