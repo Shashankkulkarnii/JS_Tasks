@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>enter your name here and its show in the screen live</h5>
+    <input type="text" placeholder="enter your name" oninput="getInput(this)">
+    <h1 id="op"></h1>
+</body>
+<script>
+    function getInput(x){
+        document.getElementById("op").innerHTML=x.value;
+    }
+</script>
+</html>

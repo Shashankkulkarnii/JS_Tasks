@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="my form" action="fun()" id="form" accept-charset="ISO-8859-1" autocomplete="on">
+        <input type="text" placeholder="name">
+        <input type="text" placeholder="last name">
+        
+    </form>
+    <button onclick="fun()">submit</button>
+    <h3 id="op"></h3>
+    <h3 id="length"></h3>
+    <h3 id="formname"></h3>
+    <script>
+        function fun(){
+
+        var a = document.getElementById("form");
+        document.getElementById("op").innerHTML= a.acceptCharset;
+        document.getElementById("length").innerHTML="for length = "+ a.length;
+        document.getElementById("formname").innerHTML="form name = "+ a.name;
+        
+
+    }
+    </script>
+</body>
+</html>

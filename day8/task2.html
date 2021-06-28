@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <button onclick="fun()"></button>
+</body>
+<script>
+  var user = {
+    Name : "Shashank",
+    psw : 123,
+    LastName:"kulkarni",
+    checkUser : function(){         
+        if(this.Name=="Shashank"&&this.psw==123){
+            var uname= ("User name is = "+this.Name+" "+this.LastName);
+        }  
+    },
+     
+}
+
+var a=user.checkUser();
+console.log(a);
+
+
+</script>
+</html>

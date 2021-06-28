@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .tr{
+            padding: 50px;
+            border: 5px;
+        }
+        .td{
+            padding: 40px;
+            border: 2px solid blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>To change the background color of the second column of a table having “n ” rows on click by using querySelector.
+    </h4>
+    <table id="table" class="tableclass" style="padding: 20px;">
+        <tr class="tr1">
+            <td class="td">1</td>
+            <td class="td">2</td>
+            <td class="td">3</td>
+            <td class="td">4</td>
+            <td class="td">5</td>
+            <td class="td">6</td>
+            <td class="td">7</td>
+            <td class="td">8</td>
+        </tr>
+        <tr class="tr2">
+            <td class="td">1</td>
+            <td class="td">2</td>
+            <td class="td">3</td>
+            <td class="td">4</td>
+            <td class="td">5</td>
+            <td class="td">6</td>
+            <td class="td">7</td>
+            <td class="td">8</td>
+        </tr>
+        <tr class="tr3">
+            <td class="td">1</td>
+            <td class="td">2</td>
+            <td class="td">3</td>
+            <td class="td">4</td>
+            <td class="td">5</td>
+            <td class="td">6</td>
+            <td class="td">7</td>
+            <td class="td">8</td>
+        </tr>
+    </table>
+    <script>
+        var a = document.querySelector("tr.tr2").addEventListener("click",function fun(x){
+            this.style.backgroundColor="red";
+        })//changing color with queryselector
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text"placeholder="Name" id="name" onfocus="Onfocusn(this)" onblur="Onblurn(this)">
+        <input type="text"placeholder=" Last Name" id="lname" onfocus="Onfocusln(this)" onblur="Onblurln(this)">    
+    </form>
+    <button id="btn" onclick="fun()">Submit</button>
+        <h6 id="op"></h6>
+    <script>
+        function Onfocusn(x){
+            x.style.backgroundColor="orange";//changing bg color to orange
+
+        }
+        function Onfocusln(x){
+            x.style.backgroundColor="orange";//changing bg color to orange
+
+        }
+        function Onblurn(x){
+            x.value = x.value.toUpperCase();//turn upper case after leaving text field
+
+        }
+        function Onblurln(x){
+            x.value = x.value.toUpperCase();//turn upper case after leaving text field
+
+        }
+        function fun(){
+            const a = document.getElementById("name").value;
+            const b = document.getElementById("lname").value;
+            const c = document.getElementById("op");
+            console.log(a+b);
+            c.innerHTML=" Full Name is = "+a+" "+b;
+            c.style.backgroundColor="orange"
+        }
+    </script>
+</body>
+</html>
