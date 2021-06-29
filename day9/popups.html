@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello this is exmple of popups </h1>
+    <button onclick="opennewwindow()">CLICK ME</button>
+    <br>
+    <button onclick="opennewwindow1()">CLICK ME</button>
+    <br>
+    <button onclick="opennewwindow2()">CLICK ME</button>
+    <br>
+    <button onclick="opennewwindow3()">MOVE by WINDOW</button>
+    <br>
+    <button onclick="opennewwindow4()">MOVE To WINDOW</button>
+    <br>
+    <button onclick="opennewwindow5()">RESIZE THE WINDOW</button>
+
+<script>
+    function opennewwindow(){
+        window.open('https://www.udemy.com/?utm_source=adwords-brand&utm_medium=udemyads&utm_campaign=Brand-Udemy_la.EN_cc.INDIA&utm_term=_._ag_78279294239_._ad_387461093429_._de_c_._dm__._pl__._ti_kwd-317458322100_._li_1007796_._pd__._&utm_term=_._pd__._kw_udemy%20app_._&matchtype=e&gclid=CjwKCAiA66_xBRBhEiwAhrMuLdH9iV-ta9bvtXSZ9dyx_KsGRkqnB4i5QZvCopeYVGMwTxaCqz-iJhoCLNoQAvD_BwE');
+    }
+
+    //if we direct open an new popup then browser restrict us to open new one
+    window.open('https://www.udemy.com/?utm_source=adwords-brand&utm_medium=udemyads&utm_campaign=Brand-Udemy_la.EN_cc.INDIA&utm_term=_._ag_78279294239_._ad_387461093429_._de_c_._dm__._pl__._ti_kwd-317458322100_._li_1007796_._pd__._&utm_term=_._pd__._kw_udemy%20app_._&matchtype=e&gclid=CjwKCAiA66_xBRBhEiwAhrMuLdH9iV-ta9bvtXSZ9dyx_KsGRkqnB4i5QZvCopeYVGMwTxaCqz-iJhoCLNoQAvD_BwE');
+    
+    
+    //if we open with some ind of tousch or with user activity then it opend not getting bocked 
+    function opennewwindow1(){
+        window.open('https://www.udemy.com/?utm_source=adwords-brand&utm_medium=udemyads&utm_campaign=Brand-Udemy_la.EN_cc.INDIA&utm_term=_._ag_78279294239_._ad_387461093429_._de_c_._dm__._pl__._ti_kwd-317458322100_._li_1007796_._pd__._&utm_term=_._pd__._kw_udemy%20app_._&matchtype=e&gclid=CjwKCAiA66_xBRBhEiwAhrMuLdH9iV-ta9bvtXSZ9dyx_KsGRkqnB4i5QZvCopeYVGMwTxaCqz-iJhoCLNoQAvD_BwE');
+    }
+
+    //here we use window.open with name and parameters
+    function opennewwindow2(){
+        
+        var a= window.open('https://www.udemy.com/?utm_source=adwords-brand&utm_medium=udemyads&utm_campaign=Brand-Udemy_la.EN_cc.INDIA&utm_term=_._ag_78279294239_._ad_387461093429_._de_c_._dm__._pl__._ti_kwd-317458322100_._li_1007796_._pd__._&utm_term=_._pd__._kw_udemy%20app_._&matchtype=e&gclid=CjwKCAiA66_xBRBhEiwAhrMuLdH9iV-ta9bvtXSZ9dyx_KsGRkqnB4i5QZvCopeYVGMwTxaCqz-iJhoCLNoQAvD_BwE','popups.html','width=300,height=300')
+    }
+    
+    function opennewwindow3(){
+        a.win.moveBy('100','300');
+    }
+    function opennewwindow4(){
+        a.win.moveTo('300','200');
+    }
+    function opennewwindow5(){
+        a.win.resizeBy(500,600)
+    }
+    a.focus(function(){
+        alert("on focus");
+    })
+    var b = window.open('https://www.w3schools.com/tags/att_script_defer.asp');
+    b.focus(function(){
+        alert("on focus");
+    })
+
+    
+</script>
+</body>
+</html>

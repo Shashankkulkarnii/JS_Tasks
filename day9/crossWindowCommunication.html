@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change()">Click Me</button>
+    <hr>
+    <iframe id="myiframe" src="./demo.html" frameborder="1"></iframe>
+    <script>
+        const myiframe = document.getElementById("myiframe");
+
+        function change(){
+            const iframeWindow = myiframe.contentWindow;
+            const iframeDocument = myiframe.contentDocument;
+            const iframeheading = iframeDocument.getElementById("h1");
+            iframeheading.innerHTML = "this has been changed";
+            iframeDocument.body.style.backgroundColor = "red";
+
+            console.log(iframeWindow.document);
+            console.log(iframeDocument);
+
+        }
+    </script>
+</body>
+</html>
