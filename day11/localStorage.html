@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 id="result"></h1>
+<h1 id="Delresult">result</h1>
+<body>
+    <script>
+        if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("name","shashank");
+    console.log(localStorage.getItem("name")); 
+    document.getElementById("result").innerHTML= localStorage.getItem("name");
+    localStorage.removeItem("name");
+    document.getElementById("Delresult").innerHTML= localStorage.getItem("name");
+    console.log(localStorage.getItem("name")); 
+}
+else{
+    console.log("browser not supported local storage");
+}
+
+    </script>
+</body>
+</html>

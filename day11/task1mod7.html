@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- To create a textarea and if a user makes changes to it without saving then show an alert that data is not saved. -->
+   <h1>Here if we change somthing in text field and left without pressing save button then we got an alert msg "Data is not saved"</h1>
+    <input type="text" id="name" onchange="change()" >
+    <button onclick="save()">Save Data</button>
+</body>
+<script>
+    function change(){
+        var Name = document.getElementById("name").value;
+        var checkName =localStorage.getItem("name");
+        if(Name != checkName || checkName==null){
+            alert("Data is Not Saved");
+        }
+        
+    }
+    function save(){
+        var Name = document.getElementById("name").value;
+        localStorage.setItem("name",Name);
+        console.log(localStorage.getItem("name"));
+    }
+
+</script>
+</html>

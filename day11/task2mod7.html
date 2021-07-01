@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .td{
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>To update the task of the column so that when a user clicks on a cell, then the background color of the cell changes on each click and to optimize the code.</h3>
+    <table>
+        <tr class="tr">
+            <td class="td">hello1</td>
+            <td class="td">hello2</td>
+            <td class="td">hello3</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">hello1</td>
+            <td class="td">hello2</td>
+            <td class="td">hello3</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">hello1</td>
+            <td class="td">hello2</td>
+            <td class="td">hello3</td>
+        </tr>
+    </table>
+    <script>
+        function fun(){
+        var x;
+        x = document.querySelectorAll(".td");
+        document.addEventListener("click",function(event) {
+            event.target.style.backgroundColor="red";
+
+            
+        })
+        console.log(x);
+    }
+    fun();
+
+    </script>
+</body>
+</html>
