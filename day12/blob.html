@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Blob</h1>
+    <a id="aid" download="file.txt">Download my name</a>
+</body>
+<script>
+    var aid = document.getElementById("aid");
+    var obj = {name:"shashank",surnmae:"kulkarni"};
+    var Blob1 = new Blob([JSON.stringify(obj,null,2)],{type : 'text/html'});
+    console.log(Blob1.name);
+    aid.href = URL.createObjectURL(Blob1);
+
+</script>
+</html>

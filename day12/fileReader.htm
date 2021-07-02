@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" onchange="fileget()" id="input">
+    <input type="file" accept="image/*" onchange="img(event)" id="input">
+  <img id="img">
+
+
+
+    <script>
+        // var input = [];
+        function fileget(){
+            var reader = new FileReader();
+let file =input.files[0];
+alert("file name is: "+file.name);
+alert("Last modiefied at: "+ file.lastModified);
+
+reader.onload = function(){
+    
+    console.log(reader.result);
+}        
+reader.readAsText(input.files[0],);
+
+}
+ 
+function img(event){
+    
+     var input = event.target;
+   var reader1 = new FileReader(); //created instance of  filereader
+   let file = input.files[0];//here we take flie which is inputed
+   reader1.onload = function(){//created onload function
+            var durl = reader1.result;//hold the input result 
+            var op = document.getElementById("img");
+            op.src=durl;//put into img
+   }
+   reader1.readAsDataURL(input.files[0]);//read as a url
+}
+
+    </script>
+</body>
+</html>

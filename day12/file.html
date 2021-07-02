@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" onchange="fileget()" id="input">
+    <a id=""></a>
+    <script>
+        // var input = [];
+        function fileget(){
+let file =input.files[0];
+alert("file name is: "+file.name);
+alert("Last modiefied at: "+ file.lastModified);
+        }
+       
+
+
+
+
+    </script>
+</body>
+</html>
