@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button  onclick="fetchApi()">fetch</button>
+<button  onclick="Abort()">abort</button>
+<body>
+    <script>
+        
+       var controller = new AbortController();
+var signal = controller.signal;
+
+function Abort() {
+  controller.abort();
+  console.log('Download aborted');
+};
+
+function fetchApi() {
+
+    var url = "https://api.publicapis.org/entries";
+        fetch(url,{signal}).then((response)=>{
+            return response.json();
+        }).then((data)=>{
+            console.log(data);
+        }).catch(e=>{
+            console.log("aborted");
+        })
+}
+    </script>
+</body>
+</html>

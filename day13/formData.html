@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myform">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname">
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        var myform = document.getElementById("myform");
+        var formData = new FormData(myform);  //here we created FormData cunstructor method in form data varible
+        
+        //Here we usining append method 
+
+        formData.append('age','23');
+
+        //here we use formData.delete method
+
+        formData.delete('name');
+        
+        
+        //jere we using formData.entries()
+        for(var pair of formData.entries()) {
+   console.log(pair[0]+ ', '+ pair[1]);
+}
+
+        //here we using forData.get ()
+        formData.append('name','shashank');
+       var getname = formData.get("name");
+        console.log(getname);
+
+        //here we use formData.getall()
+        //if we have mutlipale value with same key then we can use getall method
+
+        formData.append('name','utkarsh');
+        formData.append('name','kapil');
+        var getallnames = formData.getAll('name');
+        console.log(getallnames);
+
+        //here we use formData.has()
+        //where we can find , enterd key is in or not
+
+        var hasornot = formData.has('age');
+        console.log(hasornot);
+
+        //here we gonna use formData.keys()
+        // were we printig all the keys data
+
+        for (const keys of formData.keys()) {
+            console.log('keys : '+keys);
+            
+        }
+
+
+        //here we gonna use set()
+        //we can updata existing value with .set method at existing key
+
+        formData.set('surname','naik');
+        for (const all of formData) {
+            console.log(all);
+        }   
+
+
+
+        //here we using .values()
+        //with the help of values() we can get all the values of the formData
+
+        for (const values of formData.values()) {
+            console.log(values);
+            
+        }
+
+
+    </script>
+</body>
+</html>
