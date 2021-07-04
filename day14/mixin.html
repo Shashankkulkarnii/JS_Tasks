@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const company ={
+        ford(){
+            return "i am ford";
+        },
+    }
+    const car={
+        freestyle(){
+            return " iam freestyle"
+
+        }
+    }
+    var fullcar = Object.assign({},company,car);
+    console.log(fullcar);
+
+    //with factory function
+    const singlecar ={
+        altroz(){
+            return "i am altroz";
+        }
+    }
+
+    function cars(){
+        return Object.assign({},singlecar,{figo(){
+            return "i am figo";
+        }},
+        {swift(){
+            return "iam swift";
+        }})
+    }
+var allcars = cars();
+console.log(allcars);//here we can acess all the cars 
+console.log(allcars.altroz); //here we can use single car objects function 
+console.log(allcars.figo);//here we can access figo
+console.log(allcars.swift);//here we can access
+
+
+    
+    </script>
+</body>
+</html>

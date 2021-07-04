@@ -7,14 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    
-<img  id="img" width="100%",height="auto" >
     <script>
-        var img =document.getElementById('img');//created image element 
-        img.src= "https://wallpapercave.com/wp/wp3703403.jpg";//added img src into img.src properties
-        img.onload = function fun(){
+            var img =document.createElement('img');
+        img.src= "https://wallpapercave.com/wp/wp370340.jpg";//added img src into img.src properties
+        img.onload = function(){
             alert("image loaded "+"size "+img.width+"*"+img.height);//showing alert with img height width
         }
-        </script>
+            img.onerror = function(){
+            alert("Error, Image Not Found");//showing alert with error message
+        }
+    </script>
 </body>
 </html>

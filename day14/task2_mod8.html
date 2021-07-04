@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- To change an image on runtime when it is not available on the specified path while loading the page. -->
+    <img  id="img" width="100%",height="auto" >
+    <script>
+       var img =document.getElementById('img');
+       alert("requested iron man image path is not found");
+        img.src= "https://wallpapercave.com/wp/wp37034.jpg";//added wrong for gerrate error
+        img.onerror = function(){
+            img.src= "https://mcdn.wallpapersafari.com/medium/66/88/YmtDXB.jpg";//add new img url
+            alert("so now i am batman");
+        }
+    </script>
+</body>
+</html>
