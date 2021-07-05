@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <h1 id="result2"></h1>
+    <h1 id="result3"></h1>
+    <script>
+// CallBacks
+
+    function one(){
+        var result=document.getElementById("result");
+        result2.innerHTML="hello i am function one iam called in to second function body";
+    }
+    function two(callback){
+        var result2=document.getElementById("result2");
+        result2.innerHTML="Hello i am function two";
+        callback();
+
+    }
+     two(one);
+
+    //  one more example
+
+    function print(ans){
+        var a=document.getElementById("result3");
+        a.innerHTML= ans;
+
+    }
+    function add(num1,num2,mycallback){
+            var num3 = num1+num2;
+            mycallback(num3);
+    }
+    add(10,20,print);
+    </script>
+</body>
+</html>

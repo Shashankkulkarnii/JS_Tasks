@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date = new Date();
+        date.setFullYear(2020);
+        console.log(date);
+
+        var date = new Date();
+        date.setDate(8);
+        console.log(date);
+
+        var date = new Date();
+        date.setHours(5);
+        console.log(date);
+
+        var date1 = new Date();
+        date.setMilliseconds(846);
+        console.log(date1);
+
+        var date = new Date();
+        date.setMinutes(20);
+        console.log(date);
+
+        var date = new Date();
+        date.setSeconds(49);
+        console.log(date);
+
+        var date = new Date();
+        date.setFullYear(2020);
+        console.log(date);
+
+        //compare dates 
+        let dateOne = new Date();
+        let dateTwo =new Date();;
+        dateTwo.setFullYear(2121,4,8);
+        if (dateTwo > dateOne) {
+            console.log("before date 2");
+            
+        }
+        else{
+            console.log("after date 2");
+        }
+
+
+    </script>
+</body>
+</html>
