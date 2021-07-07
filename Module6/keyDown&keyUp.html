@@ -8,15 +8,15 @@
 </head>
 <body>
     <h1>Enter text</h1>
-    <input type="text" placeholder="enter kybords key" onkeydown="Keydown()">
+    <input id="txt" type="text" placeholder="enter kybords key" onkeydown="keydown()">
 
     <h1>Enter your name </h1>
     <input id="name" type="text" placeholder="Enter name" onkeyup="Keyup()">
 </body>
 <script>
-    function onkeydown(){
+    function keydown(){
         alert("You pressed keyboards key");
-
+        document.getElementById("txt").style.backgroundColor = "red";
     }
     function Keyup(){
         document.getElementById("name").value = document.getElementById("name").value.toUpperCase();
