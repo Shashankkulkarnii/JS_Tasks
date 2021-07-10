@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XmlHttpRequest</title>
+</head>
+<body>
+    <h1>XmlHttpRequest</h1>
+    <button onclick="fetchdata()">FetchData</button>
+    <button onclick="fetchWithpost()">FetchWithData</button>
+    <script>
+        //xhr get request
+        function fetchdata(){
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET','https://jsonplaceholder.cypress.io/todos/1',true);
+        
+        xhr.onload = function(){
+            console.log("Data");
+            if (this.status==200) {
+                console.log(this.responseText);
+                
+            } else {
+                console.log("error");
+            }
+        }
+        xhr.onprogress = function(){
+            console.log("progress");
+        }
+        xhr.send();
+    }
+    // xhr post request
+
+    function fetchWithpost() {
+        let xhr1 = new XMLHttpRequest();
+        xhr1.open('POST','http://dummy.restapiexample.com/api/v1/create',true);
+        xhr1.getAllResponseHeaders('content-type','application/json');
+
+        xhr1.onload = function () {
+            console.log("Data from post fetch request");
+            if (this.status==200) {
+                console.log(this.responseText);
+                
+            } else {
+                console.log("error");
+            }
+          
+        }
+        params=`{"name":"testshashank","salary":"123","age":"23"}`
+        xhr1.send(params);
+        
+    }
+
+    </script>
+</body>
+</html>

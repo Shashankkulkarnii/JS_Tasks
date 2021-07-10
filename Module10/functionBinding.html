@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=fuctionBinding, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function binding
+        obj1={
+            name:"shank",
+            age:"22",
+            fName:"harish",
+        }
+        obj2={
+            name:"utkarsh",
+            age:"23",
+            fName:"Upendra",
+        }
+        obj3={
+            name:"kapil",
+            age:"24",
+            fName:"Sevakram",
+        }
+        function fun1(){
+            console.log("Name: "+this.name+" Age; "+this.age+" fathername "+this.fName);
+        }
+        var fun2 = fun1.bind(obj1);
+        fun2();
+        var fun3 = fun1.bind(obj2);
+        fun3();
+        var fun4 = fun1.bind(obj3);
+        fun4();
+    </script>
+</body>
+</html>

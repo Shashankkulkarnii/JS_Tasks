@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorators</title>
+</head>
+<body>
+    <script>
+        //using call decorator here
+
+        function printname(msg){
+            console.log(this.name);
+        }
+        var myname ={name:"shashank"}
+        var carname={name:"ford"}
+        printname.call(myname);//using with myname object
+        printname.call(carname);//using with carname object
+        function printname2(msg){
+            console.log(msg+" "+this.name);
+        }
+        printname2.call(carname,"welcome");//using with carname object and passing argument welcome
+
+        // Using apply decorators
+
+        function funNames(no){
+            console.log(no+" "+this.name);
+    }
+    names={
+        name:"shashank",
+    };
+    welcone=['Hello','welcome']
+    welcone.forEach(element => {
+        funNames.apply(names,welcone);  
+    });
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name:"shashank"
+        }
+        descriptor = Object.getOwnPropertyDescriptor(obj,'name');
+        console.log(descriptor);
+
+        Object.defineProperty
+
+        obj1 = {};
+        Object.defineProperty(obj1,'name',{
+            value:"javaScript"
+        })
+        descriptor1 = Object.getOwnPropertyDescriptor(obj1,'name');
+        console.log(descriptor1);
+
+        //Non writable flag 
+        obj2={
+            name:"utkarsh"
+        }
+        Object.defineProperty(obj2,'name',{
+            writable : false
+        })
+        obj2.name="kapil";//we can not able to change the name
+        descriptor2 = Object.getOwnPropertyDescriptor(obj2,'name');
+        console.log(descriptor2);
+        
+
+        //enumerable
+
+        obj3={
+            name:"utkarsh"
+        }
+        Object.defineProperty(obj3,'name',{
+            enumerable : false
+        })
+        obj3.name="kapil";
+        console.log(obj3.name);
+        for (const key in obj3) { //we can not apply loop here we got nothing in output
+            console.log(key);
+        }
+
+
+        // Configureable
+console.log("Configureable");
+        obj4={
+            name:"utkarsh"
+        }
+        Object.defineProperty(obj4,'name',{
+            configurable : false
+        })
+        obj4.name="shashank";//we can not able to change the name
+        delete obj4.name;
+        descriptor4 = Object.getOwnPropertyDescriptor(obj4,'name');
+        console.log(descriptor4);
+        
+
+        
+
+
+    </script>
+</body>
+</html>
